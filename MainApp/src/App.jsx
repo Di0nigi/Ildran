@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "../../AppApi/app";
+
 
 class App extends React.Component{
   constructor(props){
@@ -14,12 +14,16 @@ class App extends React.Component{
   componentWillMount(){
     this.callApi();
   }
-
   render(){
-    console.log(this.state.apiResponse);
-    return this.state.apiResponse
-  }
+    return <div>
+        <p>
+          {this.state.apiResponse +"your mom"}
+          </p>
+      </div>
+  };
 }
+
+
 
 
 
