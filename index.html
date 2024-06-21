@@ -6,19 +6,45 @@
     <title>Marasmatico</title>
 
     <style>
-        body{
+        @font-face {
+            font-family: 'neue';
+            src: url("assets\\fonts\\neue regrade\\Neue Regrade Regular.otf");
+        }
+        @font-face {
+            font-family: 'neueBold';
+            src: url("assets\\fonts\\neue regrade\\Neue Regrade Bold.otf");
+        }
+        @font-face {
+            font-family: 'neueXBold';
+            src: url("assets\\fonts\\neue regrade\\Neue Regrade ExtraBold Italic.otf");
+        }
+        body {
+         
+            background-color:  rgb(255, 255, 255);
             margin: 0;
-       /* overflow-x: hidden;*/
+            overflow-x: hidden;
+            
         }
         .layout{
         flex-shrink: 0; 
-        position: relative;
-            
+        position: relative; 
         width: 100vw;
-            height: 100vh;
-            background-color:  rgb(252, 251, 223);
-        }
+        height: 100vh;
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+            /*align-items: center;*/
         
+        
+        margin: 0;       
+    }
+        .title{
+            top: 10px;
+            position: relative;
+            font-family: 'neueXBold';
+            color: #000;
+            font-size: 100px;
+            letter-spacing: -5px;
+        }
     
     </style>
 
@@ -27,12 +53,15 @@
 
 
 <body>
-    <div class = "layout">
-        
+    <div class = "layout">  
+        <p class="title">Marasmatico</p>
+    </div>
+    <div title="">
+
     </div>
 
 
-    <script>index.js</script>
+    <script>"index.js"</script>
     
 </body>
 </html>
