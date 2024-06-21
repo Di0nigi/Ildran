@@ -1,3 +1,0 @@
-cd D:\dionigi\Documents\JVSscripts\Marasmatico_
-cd D:\dionigi\Documents\JVSscripts\Marasmatico_\MainApp 
-cd D:\dionigi\Documents\JVSscripts\Marasmatico_\AppApi
