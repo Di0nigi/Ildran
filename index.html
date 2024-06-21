@@ -6,6 +6,9 @@
     <title>Marasmatico</title>
 
     <style>
+        ::-webkit-scrollbar {
+      display: none;
+    }
         @font-face {
             font-family: 'neue';
             src: url("assets\\fonts\\neue regrade\\Neue Regrade Regular.otf");
@@ -19,10 +22,16 @@
             src: url("assets\\fonts\\neue regrade\\Neue Regrade ExtraBold Italic.otf");
         }
         body {
+        /*    background-image: url('assets\\Untitled-1.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;*/
          
-            background-color:  rgb(255, 255, 255);
+            background: linear-gradient(to right, #eaf5c5, #d3e78b, #89c900);
             margin: 0;
             overflow-x: hidden;
+            
+            
             
         }
         .layout{
@@ -31,11 +40,23 @@
         width: 100vw;
         height: 100vh;
         display: flex;
-        justify-content: center; /* Centers horizontally */
-            /*align-items: center;*/
+        /*justify-content: center;*/
+        
         
         
         margin: 0;       
+    }
+    .titleContainer{
+       
+        position: relative; 
+        display: flex;
+        
+        width: 100vw;
+        height: 20vh;      
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    /*justify-content: center;*/
+
     }
         .title{
             top: 10px;
@@ -44,7 +65,16 @@
             color: #000;
             font-size: 100px;
             letter-spacing: -5px;
+            margin-bottom: 40px;
         }
+        .line-background  {
+            width: 95%;
+            margin: 0 auto;
+            border-top: 2px solid rgba(0, 0, 0, 0.482);
+            
+
+        }
+       
     
     </style>
 
@@ -54,11 +84,23 @@
 
 <body>
     <div class = "layout">  
-        <p class="title">Marasmatico</p>
-    </div>
-    <div title="">
+        <div class="titleContainer">
+            <p class="title">Marasmatico</p>
+        
+            <div class="line-background"></div>
+            
+        </div>
+        <div class="buttons">
+
+        </div>
+        
+
+
+
 
     </div>
+    
+    <
 
 
     <script>"index.js"</script>
