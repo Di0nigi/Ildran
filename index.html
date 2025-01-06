@@ -9,6 +9,14 @@
         ::-webkit-scrollbar {
       display: none;
     }
+    @font-face {
+            font-family: 'altone';
+            src: url("assets\\fonts\\altone\\Altone Trial-Regular.ttf");
+        }
+        @font-face {
+            font-family: 'altoneBold';
+            src: url("assets\\fonts\\altone\\Altone Trial-Bold.ttf");
+        }
         @font-face {
             font-family: 'neue';
             src: url("assets\\fonts\\neue regrade\\Neue Regrade Regular.otf");
@@ -27,7 +35,7 @@
             background-position: center; 
             background-attachment: fixed;*/
          
-            background: linear-gradient(to right, #eaf5c5, #d3e78b, #89c900);
+            background: rgb(255, 254, 235);
             margin: 0;
             overflow-x: hidden;
             flex-direction: column;
@@ -54,57 +62,64 @@
        
         position: relative; 
         display: flex;
-        
         width: 100vw;
         height: 20vh;      
-        flex-direction: column;
-        align-items: center; 
-
+        flex-direction: row;
+        align-items: left; 
+        margin-bottom: -20px;
     }
         .title1{
-            top: 10px;
+            top: -80px;
             position: relative;
-            font-family: 'neueXBold';
-            color: #000;
+            font-family: 'altoneBold';
+            color: #000000;
             font-size: 80px;
             letter-spacing: -5px;
             margin-bottom: -20px;
+            padding-left: 2%;
         }
         .title2{
+            top: -80px;
             position: relative;
-            font-family: 'neue';
-            color: #000000a3;
-            font-size: 25px;
-            letter-spacing: 0px;
-            margin-bottom: 40px;
+            font-family: 'neueBold';
+            color: #000000;
+            font-size: 80px;
+            letter-spacing: -5px;
+            margin-bottom: -20px;
+            margin-top: 89px;
+            padding-left: 0%;
         }
+
         .line-background  {
-            width: 95%;
+            width: 100%;
             margin: 0 auto;
             border-top: 2px solid rgb(0, 0, 0);
-            
-
+  
         }
     .buttons{
         height: 5vh;
         width: 100vw;
         display: flex;
-        margin-top: 110px;
+        
+        margin-left: -50px;
         flex-direction: row;
         background-color: rgba(255, 0, 0, 0);
-        justify-content: center; 
+        justify-content: left; 
+        padding-bottom: 20px;
 
     }
     .pad{
         padding: 30px;
     }
-
+    .pad2{
+        padding: 10px;
+    }
 
     .tabButton{
         color: #000;
-        font-family: "neue";
+        font-family: "altone";
         font-size: 19px;
-        width: 250px;
+        width: 200px;
         position: relative;
         background-color: #95959500;
         border-color: #00000000;
@@ -130,8 +145,31 @@
         font-size: 100px;
         background-color: rgba(0, 136, 255, 0);
     }
-       
-    
+    .slide-in-element {
+        background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translateX(-100%);
+    opacity: 0; /* Start invisible */
+    transition: transform 1s, opacity 1s; /* 1s duration, forwards to retain end state */
+}
+.slide-in-element.animate {
+    transform: translateX(0);
+    opacity: 1; /* Fade in */
+}
+.abtUsContent{
+    font-family: "altone";
+    color: #000;
+    font-family: "altone";
+    font-size: 19px;
+}
+.title3{
+    font-family: "altoneBold";
+    color: #000;
+    font-size: 25px;
+
+}
     </style>
 
 </head>
@@ -141,24 +179,34 @@
 <body>
     <div class = "layout">  
         <div class="titleContainer">
-            <p class="title1">Marasmatico</p>
-            <p class="title2">Associazione culturale</p>
-        
-            <div class="line-background"></div>
-            
+            <p class="title1">marasmatic</p>
+            <p class="title2">0</p>
         </div>
+        <div class="line-background"></div>
+        <div class="pad2"></div>
+        
         <div class="buttons">
             <button id="homeBt" class="tabButton active" data-tab="tabHome">Home</button>
-            <div class="pad"></div>
-            <button id="EvtBt" class="tabButton" data-tab="tabEv">Events</button>
-            <div class="pad"></div>
-            <button id="tabtBt"  class="tabButton" data-tab="tabAbt">About us</button>
+            <button id="EvtBt" class="tabButton" data-tab="tabEv">Articoli</button>
+            <button id="tabtBt"  class="tabButton" data-tab="tabAbt">Chi siamo</button>
         </div>
+        
+        <div class="line-background"></div>
         <div>
-        <div id="tabHome" class="tab-content active"> <p>AOOOO</p></div>
-        <div id="tabEv" class="tab-content"> <p>EOOOO</p></div>
-        <div id="tabAbt" class="tab-content"><p>IOOOO</p></div>
+        <div id="tabHome" class="tab-content active">
+            <p class="title3">Ultime pezzi</p>
+            <div id ="topArticlesContainer"></div>
+            <div class="bottomPanel"></div>
+            
         </div>
+        <div id="tabEv" class="tab-content"> </div>
+        <div id="tabAbt" class="tab-content">
+            <p class="abtUsContent">Indefinibili.</p>
+        </div>
+        </div>
+
+        
+        
         
 
 
