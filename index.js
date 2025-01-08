@@ -30,13 +30,30 @@ let articles =["Caratteri gotici, miniature dipinte su pergamena e una rilegatur
 
 
 var topArticlesContainer = document.getElementById("topArticlesContainer");
+topArticlesContainer.style.width="100vw";
+topArticlesContainer.style.height="50vw";
+
 /*topArticlesContainer.style.display="flex";
 topArticlesContainer.style.alignItems="center";*/
+topArticlesContainer.style.display="grid";
+topArticlesContainer.style.justifyItems="center";
+topArticlesContainer.style.gridTemplateColumns ="repeat(2, 1fr)";
 
-for (i =0; i< articles.length; i++ ){
+for (i =0; i< 4; i++ ){
+    var articleBt = document.createElement("button");
+    articleBt.style.border="none";
+    articleBt.style.background="none";
+    articleBt.style.width="45vw";
+    articleBt.style.height="40vh";
+    
+    articleBt.addEventListener("click", function() {
+                var newPageUrl = "article.html"
+                window.location.href = newPageUrl;
+            });
+       
+
     var articleContainer = document.createElement("div");
-    articleContainer.style.width="900px";
-    articleContainer.style.height="210px";
+    
     articleContainer.style.borderColor="rgb(0,0,0)"
     articleContainer.style.borderWidth="2px";
     articleContainer.style.borderStyle="inset";
@@ -75,7 +92,8 @@ for (i =0; i< articles.length; i++ ){
     articleContainer.appendChild(artTitle);
     articleContainer.appendChild(artContent);
     articleContainer.appendChild(artAuth);
-    topArticlesContainer.appendChild(articleContainer);
+    articleBt.appendChild(articleContainer);
+    topArticlesContainer.appendChild(articleBt);
 }
 
 // articles page 

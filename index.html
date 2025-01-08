@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marasmatico</title>
+    <title>Marasmatic0</title>
 
     <style>
         ::-webkit-scrollbar {
@@ -132,18 +132,20 @@
     }
     .tab-content{
         display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
+            padding: 0px;
+            border: 0px solid #cccccc00;
             border-top: none;
 
     }
     .tab-content.active{
         display: block;
         width: 100vw;
-        height: 500vh;
+        height: auto;
         font-family: "neueXBold";
         font-size: 100px;
         background-color: rgba(0, 136, 255, 0);
+        flex-shrink: 0;
+        
     }
     .slide-in-element {
         background-color: #4CAF50;
@@ -168,7 +170,14 @@
     font-family: "altoneBold";
     color: #000;
     font-size: 25px;
+    margin-left: 20px;
 
+}
+.bottomPanel{
+    position: relative;
+    background-color: #00000000;
+    width: 100vw;
+    height: 40vh;
 }
 
     </style>
@@ -197,7 +206,9 @@
         <div id="tabHome" class="tab-content active">
             <p class="title3">Ultimi pezzi</p>
             <div id ="topArticlesContainer"></div>
-            <div class="bottomPanel"></div>
+            <div class="line-background"></div>
+            <div class="bottomPanel">
+            </div>
             
         </div>
         <div id="tabEv" class="tab-content"> 
@@ -206,7 +217,7 @@
         <div id="tabAbt" class="tab-content">
             <p class="abtUsContent">Indefinibili.</p>
         </div>
-        </div>
+    </div>
 
         
         
