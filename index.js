@@ -4,11 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            // Remove active class from all tabs and tab contents
+            
             tabs.forEach(t => t.classList.remove('active'));
             tabContents.forEach(tc => tc.classList.remove('active'));
 
-            // Add active class to the clicked tab and corresponding tab content
             tab.classList.add('active');
             document.getElementById(tab.dataset.tab).classList.add('active');
         });
@@ -16,29 +15,45 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('scroll', function() {
-    const element = document.querySelector('.slide-in-element');
+    const element = document.querySelector('.topArticlesContainer');
+    const element2 = document.querySelector('.suggestedLinkContainer');
     const elementPosition = element.getBoundingClientRect().top;
+    const element2Position = element2.getBoundingClientRect().top;
     const viewHeight = window.innerHeight;
 
-    // Check if the element is in the viewport
     if (elementPosition < viewHeight) {
         element.classList.add('animate');
+    }
+    if (element2Position < viewHeight) {
+        element2.classList.add('animate');
     }
 });
 
 let articles =["Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo."];
 
 
+
+
 var topArticlesContainer = document.getElementById("topArticlesContainer");
-topArticlesContainer.style.width="100vw";
-topArticlesContainer.style.height="50vw";
+topArticlesContainer.className="topArticlesContainer";
+topArticlesContainer.style.width="50vw";
+//topArticlesContainer.style.height="100vh";
 
 /*topArticlesContainer.style.display="flex";
 topArticlesContainer.style.alignItems="center";*/
-topArticlesContainer.style.display="grid";
-topArticlesContainer.style.justifyItems="center";
-topArticlesContainer.style.gridTemplateColumns ="repeat(2, 1fr)";
+var title3 = document.createElement("p");
+title3.className="title3";
+title3.textContent="Ultimi pezzi";
 
+topArticlesContainer.style.display="flex";
+topArticlesContainer.style.flexDirection="column";
+
+
+topArticlesContainer.style.borderTopRightRadius="15px";
+topArticlesContainer.style.borderBottomRightRadius="15px";
+topArticlesContainer.style.justifyItems="left";
+topArticlesContainer.style.gridTemplateColumns ="repeat(1, 1fr)";
+topArticlesContainer.appendChild(title3);
 for (i =0; i< 4; i++ ){
     var articleBt = document.createElement("button");
     articleBt.style.border="none";
@@ -58,7 +73,8 @@ for (i =0; i< 4; i++ ){
     articleContainer.style.borderWidth="2px";
     articleContainer.style.borderStyle="inset";
     articleContainer.style.marginTop="20px";
-    articleContainer.style.backgroundColor="rgba(255, 0, 0, 0)";
+    //articleContainer.style.backgroundColor="rgb(4, 255, 0)";
+    //articleContainer.style.background="linear-gradient(to right,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
 
     var artDate = document.createElement("p");
     artDate.style.fontFamily="altone";
@@ -95,6 +111,91 @@ for (i =0; i< 4; i++ ){
     articleBt.appendChild(articleContainer);
     topArticlesContainer.appendChild(articleBt);
 }
+
+let linkList = ["https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale"];
+
+var suggestedLinkContainer = document.getElementById("suggestedLinkContainer");
+suggestedLinkContainer.style.position="relative";
+
+suggestedLinkContainer.className="suggestedLinkContainer";
+
+suggestedLinkContainer.style.width="50vw";
+
+suggestedLinkContainer.style.backgroundColor="rgba(200, 200, 200, 0)";
+
+suggestedLinkContainer.style.display="flex";
+
+suggestedLinkContainer.style.alignItems="left";
+
+var titleLinks = document.createElement("p");
+titleLinks.style.marginTop="20px";
+titleLinks.innerHTML = 'Articoli e fonti <br> per approfondire';
+titleLinks.style.fontFamily="altoneBold";
+titleLinks.style.fontSize="50px";
+
+
+suggestedLinkContainer.appendChild(titleLinks);
+var linksContainer = document.createElement("div");
+
+//linksContainer.style.width="45vw";
+linksContainer.style.borderStyle="inset";
+linksContainer.style.borderColor="rgb(0,0,0)";
+linksContainer.style.borderWidth="2px";
+linksContainer.style.borderRadius="5px"
+linksContainer.style.padding="5px";
+linksContainer.display="flex";
+linksContainer.alignItems="center";
+//linksContainer.style.background="linear-gradient(to left,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
+
+for (j =0; j< linkList.length; j++ ){
+    var link = document.createElement("p");
+    link.innerHTML = `
+        <h1>What is AI:</h1>
+        <p>${linkList[j]}</p>`;
+    link.style.fontFamily="altone";
+    link.style.fontSize="15px"
+    link.style.color="rgb(0, 0, 0)";
+    
+    link.addEventListener('click', function() {
+        window.location.replace = linkList[j];
+      });
+    linksContainer.appendChild(link);
+    
+
+
+}
+
+suggestedLinkContainer.appendChild(linksContainer);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // articles page 
 
