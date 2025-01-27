@@ -300,6 +300,25 @@
     display: flex;
     flex-direction: row;
 }
+.contactsIcon{
+    position: relative;
+    width: 3vw;
+    height: auto;
+
+}
+.contactsIconIg{
+    position: relative;
+    width: 5vw;
+    height: auto;
+    margin-right: -20px;
+
+}
+.contactsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
     </style>
 
@@ -335,10 +354,16 @@
             <div class="line-background"></div>
             <div class="bottomPanel">
                 <div class="bottomPanelTitle"> Drexit</div>
+
+                <div class="contactsContainer">
+                    <img src="assets\emailIcon.png" alt="Email" class="contactsIcon"></img>
+                    <div class="bottomPanelLine">drexit@gmail.com </div>
+                </div>
                 
-                <div class="bottomPanelLine">Email: drexit@gmail.com </div>
-                
-                <div class="bottomPanelLine">Instagram: drexitOfficial </div>
+                <div class="contactsContainer">
+                    <img src="assets\igIcon.png" alt="Instagram" class="contactsIconIg"></img>
+                    <div class="bottomPanelLine">drexitOfficial </div>
+                </div>
                 
                 <button id="bottomPanelButton" class="bottomPanelButton">Chi siamo</button>
                 
