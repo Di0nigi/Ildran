@@ -69,17 +69,33 @@ document.addEventListener('scroll', function() {
 });
 
 document.addEventListener('scroll', function() {
-    const element =  document.querySelector('.articleContainer');
+    const elements =  document.querySelectorAll('.articleContainer');
 
     const element2 =  document.getElementById("tabEv");
-   
-    const elementPosition = element.getBoundingClientRect().top;
-    
     const viewHeight = window.innerHeight;
-
-    if (elementPosition < viewHeight && element2.classList.contains('active')) {
-        element.classList.add('animate');
+    /*const elementPositions= elements.forEach( el => {
+        el
+        
+    }); 
+    elementPositions.forEach( elPos =>{
+        if (elPos < viewHeight && element2.classList.contains('active')) {
+            classList.add('animate');
+        }
     }
+
+    );*/
+    for (i =0;i<elements.length;i++){
+        pos=elements[0].getBoundingClientRect().top;
+        if (pos < viewHeight && element2.classList.contains('active')) {
+            elements[i].classList.add('animate');
+        }
+
+    }
+
+    
+   
+
+    
    /* else{
         element.classList.remove('animate');
 
@@ -87,7 +103,7 @@ document.addEventListener('scroll', function() {
 });
 
 //let articles =["Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo."];
-let articlesPaths =["articles/SampleArticle.txt"];
+let articlesPaths =["articles/SampleArticle.txt","articles/SampleArticle.txt","articles/SampleArticle.txt","articles/SampleArticle.txt","articles/SampleArticle.txt"];
 var articles=[];
 
 /*function getText(artList) {
@@ -177,6 +193,7 @@ function getText(artList) {
         var title3 = document.createElement("p");
         title3.className="title3";
         title3.textContent="Ultimi pezzi";
+        
 
         topArticlesContainer.style.display="flex";
         topArticlesContainer.style.flexDirection="column";
@@ -211,7 +228,7 @@ function getText(artList) {
         articleContainer.style.marginTop="20px";
         articleContainer.style.boxShadow="-5px 5px 10px rgba(0, 0, 0, 0.3)";
         //articleContainer.style.backgroundColor="rgba(255, 4, 251, 0.29)";
-        //articleContainer.style.background="linear-gradient(to right,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
+        articleContainer.style.background="linear-gradient(to left,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
         
         var artDate = document.createElement("p");
         artDate.style.fontFamily="neue";
@@ -321,26 +338,6 @@ suggestedLinkContainer.appendChild(linksContainer);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // articles page 
 
 var allArticles=[];
@@ -407,30 +404,25 @@ function getTextArticlesPage(artList) {
 
 
 var articlesPageContainer = document.getElementById("articlesPageContainer");
-
-
-
-
-
-
-
-
 articlesPageContainer.style.width="100vw";
 articlesPageContainer.style.height="100vh";
+articlesPageContainer.style.display="flex";
+articlesPageContainer.style.flexDirection="column";
+articlesPageContainer.style.alignItems="center";
 articlesPageContainer.style.overflowY="scroll";
 articlesPageContainer.style.borderRadius="15px"
 //articlesPageContainer.style.background="linear-gradient(to left,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
 //articlesPageContainer.style.backgroundColor="rgb(0,0,0)";
-articlesPageContainer.style.display="flex";
-articlesPageContainer.style.flexDirection="column";
-articlesPageContainer.style.alignItems="center";
+
 
 getTextArticlesPage(articlesPaths).then(arts=>{
 
 
     for (i =0; i< arts.length; i++ ){
+        console.log(i);
 
         var articleContainer = document.createElement("div");
+        articleContainer.style.margin="10px";
         articleContainer.className="articleContainer";
         articleContainer.style.alignItems="center";
         articleContainer.style.width="80vw";
@@ -439,7 +431,7 @@ getTextArticlesPage(articlesPaths).then(arts=>{
         articleContainer.style.borderWidth="2px";
         articleContainer.style.borderStyle="inset";
         articleContainer.style.marginTop="20px";
-        articleContainer.style.backgroundColor="rgba(255, 0, 0, 0)";
+        articleContainer.style.background="linear-gradient(to right,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
         articleContainer.overflowY="scroll";
         articleContainer.style.boxShadow="-5px 5px 10px rgba(0, 0, 0, 0.3)";
         articleContainer.style.borderRadius="5px";
