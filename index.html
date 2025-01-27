@@ -190,10 +190,10 @@
     opacity: 1; 
 }
 .abtUsContent{
-    font-family: "altone";
-    color: #000;
-    font-family: "altone";
-    font-size: 19px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
 }
 .title3{
     font-family: "altoneBold";
@@ -295,6 +295,19 @@
   transform: translateX(0);
 
 }
+.articleContainer{
+    opacity: 0; 
+    display: flex;
+   flex-direction:column;
+  transform: translateX(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+
+}
+.articleContainer.animate{
+    opacity: 1; 
+    transform: translateX(0);
+
+}
 .rowdisp{
     display: flex;
     flex-direction: row;
@@ -383,7 +396,7 @@
             </div>
         </div>
         <div id="tabAbt" class="tab-content">
-            <p class="abtUsContent">Indefinibili.</p>
+            <div class="abtUsContent"></div>
             
             <div class="line-background"></div>
             <div class="bottomPanel">

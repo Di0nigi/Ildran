@@ -68,6 +68,24 @@ document.addEventListener('scroll', function() {
     }
 });
 
+document.addEventListener('scroll', function() {
+    const element =  document.querySelector('.articleContainer');
+
+    const element2 =  document.getElementById("tabEv");
+   
+    const elementPosition = element.getBoundingClientRect().top;
+    
+    const viewHeight = window.innerHeight;
+
+    if (elementPosition < viewHeight && element2.classList.contains('active')) {
+        element.classList.add('animate');
+    }
+   /* else{
+        element.classList.remove('animate');
+
+    }*/
+});
+
 //let articles =["Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo.","Caratteri gotici, miniature dipinte su pergamena e una rilegatura in pregiata pelle rossa con incisa una piccola scritta dorata: Liber Novus. Quest’insolito aspetto da manoscritto medievale ammanta l’esercizio di “immaginazione attiva” che coinvolse Jung dal 1913 al 1930. Il taglio fortemente esoterico del contenuto, in armonia con la forma, rende difficile la categorizzazione di questo scritto che, da un’analisi superficiale, si palesa come il delirio ragionato di un dotto uomo di mezza età. Beh, si tratta esattamente di questo. Dopo aver a lungo frequentato l’irrazionalismo di fine Ottocento, nonché il taoismo e la mistica cristiana, lo psicanalista svizzero sancì definitivamente la rottura con Freud e con la sua negativizzazione dell’inconscio. Tuttavia, quello di Jung non fu solamente un allontanamento dalle teorie freudiane, bensì una presa di distanza radicale dagli assiomi che la modernità si era posta. Le immagini, le voci, i sussulti dell’inconscio (o per meglio dire, dello spirito del profondo) non significano nulla alla mente razionale dell’uomo moderno. Il primato della ragione è stato posto a fondamento vita umana. Il pensiero-giudizio vince ed impera sull’aspetto irrazionale e volitivo dell’uomo."];
 let articlesPaths =["articles/SampleArticle.txt"];
 var articles=[];
@@ -234,7 +252,7 @@ function getText(artList) {
           console.log("Error:", error);
         });
 
-let linkList = ["https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale","https://it.wikipedia.org/wiki/Intelligenza_artificiale"];
+let linkList = ["https://it.wikipedia.org/wiki/Intelligenza_artificiale"];
 
 var suggestedLinkContainer = document.getElementById("suggestedLinkContainer");
 suggestedLinkContainer.style.position="relative";
@@ -279,7 +297,7 @@ for (j =0; j< linkList.length; j++ ){
         <h1>What is AI:</h1>
         <p>${linkList[j]}</p>`;
     link.style.fontFamily="altone";
-    link.style.fontSize="15px"
+    link.style.fontSize="15px";
     link.style.color="rgb(0, 0, 0)";
     
     link.addEventListener('click', function() {
@@ -325,49 +343,145 @@ suggestedLinkContainer.appendChild(linksContainer);
 
 // articles page 
 
+var allArticles=[];
+
+
+function getTextArticlesPage(artList) {
+    
+    return new Promise((resolve, reject) => {
+      const promises = []; 
+      
+      for (let ind = 0; ind < artList.length; ind++) {
+        const path = artList[ind];
+        const fetchPromise = fetch(path)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('File not found');
+            }
+            return response.text(); 
+          })
+          .then(data => {
+            const lines = data.split(/\r?\n/);
+            var tit = lines[0];
+            var aut = lines[1];
+            var date = lines[2];
+            var content="";
+            lines.forEach((lines,ind)=>{
+                if(ind>2){
+                    content+=lines;
+
+                }
+            });
+            var art = new Article(tit,content,aut,date);
+            art.prev=art.createPreview(1000);
+            allArticles.push(art);
+            
+            
+          })
+          .catch(error => {
+            console.error('Error fetching the file:', error);
+          });
+        
+        promises.push(fetchPromise); 
+      }
+  
+    
+      Promise.all(promises)
+        .then(() => {
+          
+          resolve(allArticles); 
+        })
+        .catch(error => {
+
+          reject(error);
+        });
+    });
+  }
+
+
+
+
+
+
+
+
+
 var articlesPageContainer = document.getElementById("articlesPageContainer");
 
-for (i =0; i< articles.length; i++ ){
-    var articleContainer = document.createElement("div");
-    articleContainer.style.width="900px";
-    articleContainer.style.height="210px";
-    articleContainer.style.borderColor="rgb(0,0,0)"
-    articleContainer.style.borderWidth="2px";
-    articleContainer.style.borderStyle="inset";
-    articleContainer.style.marginTop="20px";
-    articleContainer.style.backgroundColor="rgba(255, 0, 0, 0)";
-
-    var artDate = document.createElement("p");
-    artDate.style.fontFamily="altone";
-    artDate.style.margin="5px";
-    artDate.style.fontSize="8px";
-    artDate.style.color="rgba(84, 84, 84, 0.62)";
-    artDate.textContent="20/10/24";
-
-    var artTitle = document.createElement("p");
-    artTitle.style.margin="5px";
-    artTitle.style.fontFamily="altoneBold";
-    artTitle.style.fontSize="19px";
-    artTitle.textContent="Caratteri gotici";
-
-    var artContent = document.createElement("p");
-    artContent.style.fontFamily="altone";
-    artContent.style.margin="10px";
-    artContent.style.fontSize="12px";
-    artContent.style.color="rgba(0, 0, 0, 0.62)";
-    artContent.textContent=articles[i]
-
-    var artAuth = document.createElement("p");
-    artAuth.style.margin="5px";
-    artAuth.style.fontFamily="altoneBold";
-    artAuth.style.fontSize="10px";
-    artAuth.textContent="Raimondo Katte";
 
 
 
-    articleContainer.appendChild(artDate);
-    articleContainer.appendChild(artTitle);
-    articleContainer.appendChild(artContent);
-    articleContainer.appendChild(artAuth);
-    articlesPageContainer.appendChild(articleContainer);
-}
+
+
+
+
+articlesPageContainer.style.width="100vw";
+articlesPageContainer.style.height="100vh";
+articlesPageContainer.style.overflowY="scroll";
+articlesPageContainer.style.borderRadius="15px"
+//articlesPageContainer.style.background="linear-gradient(to left,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
+//articlesPageContainer.style.backgroundColor="rgb(0,0,0)";
+articlesPageContainer.style.display="flex";
+articlesPageContainer.style.flexDirection="column";
+articlesPageContainer.style.alignItems="center";
+
+getTextArticlesPage(articlesPaths).then(arts=>{
+
+
+    for (i =0; i< arts.length; i++ ){
+
+        var articleContainer = document.createElement("div");
+        articleContainer.className="articleContainer";
+        articleContainer.style.alignItems="center";
+        articleContainer.style.width="80vw";
+        articleContainer.style.height="45vh";
+        articleContainer.style.borderColor="rgb(0,0,0)"
+        articleContainer.style.borderWidth="2px";
+        articleContainer.style.borderStyle="inset";
+        articleContainer.style.marginTop="20px";
+        articleContainer.style.backgroundColor="rgba(255, 0, 0, 0)";
+        articleContainer.overflowY="scroll";
+        articleContainer.style.boxShadow="-5px 5px 10px rgba(0, 0, 0, 0.3)";
+        articleContainer.style.borderRadius="5px";
+    
+        var artDate = document.createElement("p");
+        artDate.style.fontFamily="neue";
+        artDate.style.margin="5px";
+        artDate.style.fontSize="16px";
+        artDate.style.color="rgba(84, 84, 84, 0.62)";
+        artDate.textContent=arts[i].date;
+    
+        var artTitle = document.createElement("p");
+        artTitle.style.margin="5px";
+        artTitle.style.fontFamily="altoneBold";
+        artTitle.style.fontSize="70px";
+        artTitle.textContent=arts[i].title;
+    
+        var artContent = document.createElement("p");
+        artContent.style.fontFamily="neue";
+        artContent.style.margin="10px";
+        artContent.style.fontSize="20px";
+        artContent.style.color="rgba(0, 0, 0, 0.62)";
+        artContent.style.textAlign="center";
+        artContent.textContent=arts[i].prev;
+    
+        var artAuth = document.createElement("p");
+        artAuth.style.margin="5px";
+        artAuth.style.fontFamily="altoneBold";
+        artAuth.style.fontSize="20px";
+        artAuth.textContent=arts[i].owner;
+    
+    
+    
+        articleContainer.appendChild(artDate);
+        articleContainer.appendChild(artTitle);
+        articleContainer.appendChild(artContent);
+        articleContainer.appendChild(artAuth);
+        articlesPageContainer.appendChild(articleContainer);
+
+        
+    }
+
+});
+
+
