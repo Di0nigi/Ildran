@@ -1,10 +1,11 @@
 
 class Article{
-    constructor(title,content,owner,date,len=300){
+    constructor(title,content,owner,date,path,len=300){
         this.title=title;
         this.content=content;
         this.owner=owner;
         this.date=date;
+        this.path=path;
         this.prev=this.createPreview(len);
     }
     createPreview(len){
@@ -154,7 +155,7 @@ function getText(artList) {
 
                 }
             });
-            var art = new Article(tit,content,aut,date);
+            var art = new Article(tit,content,aut,date,path);
             articles.push(art);
             
             
@@ -212,11 +213,11 @@ function getText(artList) {
         articleBt.style.background="none";
         articleBt.style.width="45vw";
         articleBt.style.height="40vh";
-
+        (function(i) {
         articleBt.addEventListener("click", function() {
-                    var newPageUrl = "article.html"
-                    window.location.href = newPageUrl;
-                });
+                var newPageUrl = "article.html?string=" + data[i].path;
+                window.location.href = newPageUrl;
+                })})(i);
             
 
         var articleContainer = document.createElement("div");
@@ -369,7 +370,7 @@ function getTextArticlesPage(artList) {
 
                 }
             });
-            var art = new Article(tit,content,aut,date);
+            var art = new Article(tit,content,aut,date,path);
             art.prev=art.createPreview(1000);
             allArticles.push(art);
             
