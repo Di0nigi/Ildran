@@ -14,6 +14,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const bt = document.querySelector('.bottomPanelButton');
+    const tabs = document.querySelectorAll('.tabButton');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+   
+    
+        bt.addEventListener('click', () => {
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(tc => tc.classList.remove('active'));
+
+            document.getElementById("tabtBt").classList.add('active');
+            document.getElementById("tabAbt").classList.add('active');
+            console.log("triggered");
+        });
+    });
+
+
 document.addEventListener('scroll', function() {
     const element = document.querySelector('.topArticlesContainer');
     const element2 = document.querySelector('.suggestedLinkContainer');
@@ -36,8 +55,8 @@ let articles =["Caratteri gotici, miniature dipinte su pergamena e una rilegatur
 
 var topArticlesContainer = document.getElementById("topArticlesContainer");
 topArticlesContainer.className="topArticlesContainer";
-topArticlesContainer.style.width="50vw";
-//topArticlesContainer.style.height="100vh";
+topArticlesContainer.style.width="55vw";
+topArticlesContainer.style.height="100vh";
 
 /*topArticlesContainer.style.display="flex";
 topArticlesContainer.style.alignItems="center";*/
@@ -47,12 +66,13 @@ title3.textContent="Ultimi pezzi";
 
 topArticlesContainer.style.display="flex";
 topArticlesContainer.style.flexDirection="column";
+topArticlesContainer.style.overflowY="scroll";
 
 
 topArticlesContainer.style.borderTopRightRadius="15px";
 topArticlesContainer.style.borderBottomRightRadius="15px";
 topArticlesContainer.style.justifyItems="left";
-topArticlesContainer.style.gridTemplateColumns ="repeat(1, 1fr)";
+//topArticlesContainer.style.gridTemplateColumns ="repeat(1, 1fr)";
 topArticlesContainer.appendChild(title3);
 for (i =0; i< 4; i++ ){
     var articleBt = document.createElement("button");
@@ -119,7 +139,10 @@ suggestedLinkContainer.style.position="relative";
 
 suggestedLinkContainer.className="suggestedLinkContainer";
 
-suggestedLinkContainer.style.width="50vw";
+suggestedLinkContainer.style.width="40vw";
+suggestedLinkContainer.style.height="105vh";
+
+suggestedLinkContainer.style.overflowY="scroll";
 
 suggestedLinkContainer.style.backgroundColor="rgba(200, 200, 200, 0)";
 

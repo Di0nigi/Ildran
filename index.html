@@ -136,6 +136,9 @@
     .pad2{
         padding: 10px;
     }
+    .pad3{
+        padding: 60px;
+    }
 
     .tabButton{
         color: #000;
@@ -157,7 +160,8 @@
             padding: 0px;
             border: 0px solid #cccccc00;
             border-top: none;
-            flex-direction: row;
+            flex-direction: column;
+            
 
     }
     .tab-content.active{
@@ -169,6 +173,7 @@
         font-size: 100px;
         background-color: rgba(0, 136, 255, 0);
         flex-shrink: 0;
+        overflow-y: false;
         
     }
     .slide-in-element {
@@ -177,12 +182,12 @@
     padding: 20px;
     border-radius: 5px;
     transform: translateX(-100%);
-    opacity: 0; /* Start invisible */
+    opacity: 0; 
     transition: transform 1s, opacity 1s; /* 1s duration, forwards to retain end state */
 }
 .slide-in-element.animate {
     transform: translateX(0);
-    opacity: 1; /* Fade in */
+    opacity: 1; 
 }
 .abtUsContent{
     font-family: "altone";
@@ -200,11 +205,59 @@
 
 }
 .bottomPanel{
+    
     position: relative;
     background-color: #00000000;
-    width: 100vw;
-    height: 40vh;
+    width: 90vw;
+    height: 15vh; 
+    flex-direction: row;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+    
 }
+.bottomPanelLine{
+    font-family: "altoneBold";
+    font-size: 15px;
+    color: #000;
+
+}
+.bottomPanelTitle{
+            position: relative;
+            font-family: 'altoneBold';
+            color: #000000;
+            font-size: 90px;
+            letter-spacing: -5px;
+            
+            padding-left: 0%;
+        }
+        .bottomPanelTitle::before {
+            content: "Drexit";
+            position: absolute;
+            top: 2px; 
+            left: -2px; 
+            color: rgb(255, 0, 0);
+            z-index: -1;
+            /*transform: translate(-3px, -3px);  */
+        }
+        .bottomPanelTitle::after {
+            content: "Drexit" ;
+            position: absolute;
+            top: -2px; 
+            left: 2px; 
+            color: blue;
+            z-index: -1;
+            
+        }
+        .bottomPanelButton{
+            font-family: "altoneBold";
+            font-size: 20px;
+            color: #000000;
+            background: none;
+
+        }
 .topArticlesContainer {
   opacity: 0; 
   transform: translateX(-100%); 
@@ -214,7 +267,6 @@
   border-color: #000;
     border-width: 1px;
     border-style: inset;
-
 }
 
 
@@ -244,8 +296,10 @@
   transform: translateX(0);
 
 }
-
-
+.rowdisp{
+    display: flex;
+    flex-direction: row;
+}
 
     </style>
 
@@ -272,11 +326,24 @@
         <div class="line-background"></div>
         <div>
         <div id="tabHome" class="tab-content active">
+            <div class="rowdisp">
             
-            <div id ="topArticlesContainer",class="topArticlesContainer"></div>
+                <div id ="topArticlesContainer",class="topArticlesContainer"></div>
 
-            <div id ="suggestedLinkContainer", class="suggestedLinkContainer"></div>
-            
+                <div id ="suggestedLinkContainer", class="suggestedLinkContainer"></div>
+            </div>
+            <div class="line-background"></div>
+            <div class="bottomPanel">
+                <div class="bottomPanelTitle"> Drexit</div>
+                
+                <div class="bottomPanelLine">Email: drexit@gmail.com </div>
+                
+                <div class="bottomPanelLine">Instagram: drexitOfficial </div>
+                
+                <button id="bottomPanelButton" class="bottomPanelButton">Chi siamo</button>
+                
+
+                
             </div>
             
         </div>
