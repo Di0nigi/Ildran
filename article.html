@@ -8,6 +8,27 @@
         ::-webkit-scrollbar {
       display: none;
     }
+    @font-face {
+            font-family: 'altone';
+            src: url("assets\\fonts\\altone\\Altone Trial-Regular.ttf");
+        }
+        @font-face {
+            font-family: 'altoneBold';
+            src: url("assets\\fonts\\altone\\Altone Trial-Bold.ttf");
+        }
+        @font-face {
+            font-family: 'neue';
+            src: url("assets\\fonts\\neue regrade\\Neue Regrade Regular.otf");
+        }
+        @font-face {
+            font-family: 'neueBold';
+            src: url("assets\\fonts\\neue regrade\\Neue Regrade Bold.otf");
+        }
+        @font-face {
+            font-family: 'neueXBold';
+            src: url("assets\\fonts\\neue regrade\\Neue Regrade ExtraBold Italic.otf");
+        }
+    
     body {
          
             background: linear-gradient(to right,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255));
@@ -23,12 +44,124 @@
         height: 100vh;
 
     }
+    .titleDivisor{
+        border-radius: 0px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: black;
+        width: 100wv;
+        height: auto;
+        background: linear-gradient(to right,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255));
+        justify-items: left;
+        
+    }
+    .bottomPanel{
+    
+    position: relative;
+    background-color: #00000000;
+    width: 90vw;
+    height: 15vh; 
+    flex-direction: row;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+    
+}
+    .bottomPanelTitle{
+            position: relative;
+            font-family: 'altoneBold';
+            color: #000000;
+            font-size: 90px;
+            letter-spacing: -5px;
+            
+            padding-left: 0%;
+        }
+        .bottomPanelTitle::before {
+            content: "Drexit";
+            position: absolute;
+            top: 2px; 
+            left: -2px; 
+            color: rgb(255, 0, 0);
+            z-index: -1;
+            /*transform: translate(-3px, -3px);  */
+        }
+        .bottomPanelTitle::after {
+            content: "Drexit" ;
+            position: absolute;
+            top: -2px; 
+            left: 2px; 
+            color: blue;
+            z-index: -1;
+            
+        }
+        .bottomPanelButton{
+            font-family: "altoneBold";
+            font-size: 20px;
+            color: #000000;
+            background: none;
+
+        }
+        .rowdisp{
+    display: flex;
+    flex-direction: row;
+}
+.contactsIcon{
+    position: relative;
+    width: 3vw;
+    height: auto;
+
+}
+.contactsIconIg{
+    position: relative;
+    width: 5vw;
+    height: auto;
+    margin-right: -20px;
+
+}
+.contactsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.line-background  {
+            width: 100%;
+            margin: 0 auto;
+            border-top: 2px solid rgb(0, 0, 0);
+  
+        }
+        .bottomPanelLine{
+    font-family: "altoneBold";
+    font-size: 15px;
+    color: #000;
+
+}
     </style>
  </head>
  <body>
     <div class = "layout">
+        <div class="titleDivisor">
+            <div id="titleContainer",class="titleContainer"></div>
+            <div id="authorContainer"class="authorContainer"></div>
+        </div>
+       <div id="textContainer",class="textContainer"></div>
 
-        <div id="displayer"></div>
+       <div class="line-background"></div>
+       <div class="bottomPanel">
+        <div class="bottomPanelTitle"> Drexit</div>
+        <div class="contactsContainer">
+            <img src="assets\emailIcon.png" alt="Email" class="contactsIcon"></img>
+            <div class="bottomPanelLine">drexit@gmail.com </div>
+        </div>
+        <div class="contactsContainer">
+            <img src="assets\igIcon.png" alt="Instagram" class="contactsIconIg"></img>
+            <div class="bottomPanelLine">drexitOfficial </div>
+        </div>
+        <button id="bottomPanelButton" class="bottomPanelButton">Chi siamo</button>
+    </div>
+
 
 
 
