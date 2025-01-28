@@ -20,6 +20,7 @@ def convertDocs(ogFile, dsFile):
             pNormal= ud.normalize("NFC",pNormal)
             f.write(pNormal)
             f.write("\n")
+
         
         
 

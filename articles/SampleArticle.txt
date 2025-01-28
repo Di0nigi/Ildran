@@ -1,7 +1,6 @@
-L'AI in breve
+L’Ai in breve
 Dionigi Rodriguez
-20/08/25
-
+20/21/23
 
 L'intelligenza artificiale (in sigla italiana: IA o in inglese AI, dall'acronimo di Artificial Intelligence), nel suo significato più ampio, è la capacità o il tentativo di un sistema artificiale (tipicamente un sistema informatico) di simulare una generica forma di intelligenza.
 L'etica dell'intelligenza artificiale è una disciplina dibattuta tra scienziati e filosofi che manifesta numerosi aspetti sia teorici sia pratici.[3] Stephen Hawking nel 2014 ha messo in guardia riguardo ai pericoli dell'intelligenza artificiale, considerandola una minaccia per la sopravvivenza dell'umanità.[4]
