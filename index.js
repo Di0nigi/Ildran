@@ -413,9 +413,7 @@ articlesPageContainer.addEventListener("mouseenter",()=>{
       }
     }
 
-
-
-
+// comment
 
 });
 
