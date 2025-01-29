@@ -71,23 +71,15 @@ document.addEventListener('scroll', function() {
 
 document.addEventListener('scroll', function() {
     const elements =  document.querySelectorAll('.articleContainer');
+    
 
     const element2 =  document.getElementById("tabEv");
+    //const element3 = document.getElementById("articlesPageContainer");
     const viewHeight = window.innerHeight;
-    /*const elementPositions= elements.forEach( el => {
-        el
-        
-    }); 
-    elementPositions.forEach( elPos =>{
-        if (elPos < viewHeight && element2.classList.contains('active')) {
-            classList.add('animate');
-        }
-    }
-
-    );*/
+ 
     for (i =0;i<elements.length;i++){
         pos=elements[0].getBoundingClientRect().top;
-        if (pos < viewHeight && element2.classList.contains('active')) {
+        if (pos < viewHeight && element2.classList.contains('active') ) {
             elements[i].classList.add('animate');
         }
 
@@ -405,6 +397,30 @@ function getTextArticlesPage(artList) {
 
 
 var articlesPageContainer = document.getElementById("articlesPageContainer");
+
+articlesPageContainer.addEventListener("mouseenter",()=>{
+  const elements =  document.querySelectorAll('.articleContainer');
+    
+
+  const element2 =  document.getElementById("tabEv");
+  //const element3 = document.getElementById("articlesPageContainer");
+  //const viewHeight = window.innerHeight;
+
+  for (i =0;i<elements.length;i++){
+      pos=elements[0].getBoundingClientRect().top;
+      if (element2.classList.contains('active') ) {
+          elements[i].classList.add('animate');
+      }
+    }
+
+
+
+
+
+});
+
+
+
 articlesPageContainer.style.width="100vw";
 articlesPageContainer.style.height="100vh";
 articlesPageContainer.style.display="flex";
