@@ -80,6 +80,7 @@
             letter-spacing: -5px;
             margin-bottom: -150px;
             padding-left: 0%;
+            white-space: nowrap;
         }
         .title1::before {
             content: "Il dran";
@@ -338,6 +339,10 @@
     align-items: center;
 }
 @media(max-width: 600px){
+    body{
+        overflow-x: hidden;
+    }
+    
     .layout{
         flex-shrink: 0; 
         position: relative; 
@@ -345,6 +350,7 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
         
        
         /*justify-content: center;*/
