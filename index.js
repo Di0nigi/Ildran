@@ -178,7 +178,7 @@ function getText(artList) {
     
         var topArticlesContainer = document.getElementById("topArticlesContainer");
         topArticlesContainer.className="topArticlesContainer";
-        topArticlesContainer.style.width="55vw";
+        //topArticlesContainer.style.width="55vw";
         topArticlesContainer.style.height="100vh";
 
         /*topArticlesContainer.style.display="flex";
@@ -269,7 +269,7 @@ suggestedLinkContainer.style.position="relative";
 
 suggestedLinkContainer.className="suggestedLinkContainer";
 
-suggestedLinkContainer.style.width="40vw";
+
 suggestedLinkContainer.style.height="100vh";
 
 suggestedLinkContainer.style.overflowY="scroll";

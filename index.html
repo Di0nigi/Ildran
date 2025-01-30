@@ -35,7 +35,7 @@
             background-position: center; 
             background-attachment: fixed;*/
          
-            background: linear-gradient(to right,  #ffffff,#b4d8ff);
+            /*background: linear-gradient(to right,  #ffffff,#b4d8ff);*/
             background: linear-gradient(to right,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255));
             margin: 0;
             overflow-x: hidden;
@@ -270,6 +270,7 @@
   border-color: #000;
     border-width: 1px;
     border-style: inset;
+    width: 55vw;
 }
 
 
@@ -291,11 +292,13 @@
     border-color: #000;
     border-width: 1px;
     border-style: inset;
+    width: 40vw;
 
 }
 .suggestedLinkContainer.animate{
     opacity: 1; 
   transform: translateX(0);
+  
 
 }
 .articleContainer{
@@ -333,6 +336,312 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+@media(max-width: 600px){
+    .layout{
+        flex-shrink: 0; 
+        position: relative; 
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        
+       
+        /*justify-content: center;*/
+        
+        
+        
+        margin: 0;       
+    }
+    .titleContainer{
+       
+        position: relative; 
+        display: flex;
+        width: 100vw;
+        height: 4vh;      
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 200px;
+        margin-top: -10px;
+    }
+        .title1{
+            top: 0%;
+            position: relative;
+            font-family: 'altoneBold';
+            color: #000000;
+            font-size: 600%;
+            letter-spacing: -5px;
+            margin-bottom: -50px;
+            padding-left: 0%;
+        }
+        .title1::before {
+            content: "Il dran";
+            position: absolute;
+            top: 4px; 
+            left: -4px; 
+            color: rgb(255, 0, 0);
+            z-index: -1;
+            /*transform: translate(-3px, -3px);  */
+        }
+        .title1::after {
+            content: "Il dran";
+            position: absolute;
+            top: -4px; 
+            left: 4px; 
+            color: blue;
+            z-index: -1;
+             
+            white-space: nowrap;
+            
+        }
+        .title2{
+            top: 0%;
+            position: relative;
+            font-family: 'neueBold';
+            color: #000000;
+            font-size: 100%;
+            letter-spacing: 0px;
+            margin-bottom: 0px;
+            margin-top: 89px;
+            padding-left: 0%;
+        }
+
+        .line-background  {
+            width: 100%;
+            margin: 0 auto;
+            border-top: 2px solid rgb(0, 0, 0);
+  
+        }
+    .buttons{
+
+        height: 3vh;
+        width: 100vw;
+        display: flex;
+        
+        margin-left: -1vw;
+        flex-direction: row;
+        background-color: rgba(255, 0, 0, 0);
+        justify-content: center; 
+        padding-bottom: 4vw;
+
+    }
+    .pad{
+        padding: 5vw;
+    }
+    .pad2{
+        padding: 2vw;
+    }
+    .pad3{
+        padding: 6vw;
+    }
+
+    .tabButton{
+        color: #000;
+        font-family: "altone";
+        font-size: 90%;
+        width: 20vw;
+        position: relative;
+        background-color: #95959500;
+        border-color: #00000000;
+        
+
+    }
+    .tabButton.active{
+        color: #00000049;
+        background-color: #00000000;
+    }
+    .tab-content{
+        display: none;
+            padding: 0px;
+            border: 0px solid #cccccc00;
+            border-top: none;
+            flex-direction: column;
+            
+
+    }
+    .tab-content.active{
+        
+        display: flex;
+        width: 100vw;
+        height: auto;
+        font-family: "neueXBold";
+        font-size: 400%;
+        background-color: rgba(0, 136, 255, 0);
+        flex-shrink: 0;
+        overflow-y: false;
+        
+    }
+    .slide-in-element {
+        background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transform: translateX(-100%);
+    opacity: 0; 
+    transition: transform 1s, opacity 1s; /* 1s duration, forwards to retain end state */
+}
+.slide-in-element.animate {
+    transform: translateX(0);
+    opacity: 1; 
+}
+.abtUsContent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+}
+.title3{
+    font-family: "altoneBold";
+    color: #000;
+    font-size: 50%;
+    margin-left: 10%;
+    margin-bottom: -10%;
+    margin-top: 0px;
+
+}
+.bottomPanel{
+    
+    position: relative;
+    background-color: #00000000;
+    width: 90vw;
+    height: 15vh; 
+    flex-direction: row;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px;
+    
+}
+.bottomPanelLine{
+    font-family: "altoneBold";
+    font-size: 15%;
+    color: #000;
+
+}
+.bottomPanelTitle{
+    top: 0%;
+            position: relative;
+            font-family: 'altoneBold';
+            color: #000000;
+            font-size: 40%;
+            letter-spacing: -5px;
+            
+            padding-left: 0%;
+            white-space: nowrap;
+        }
+        .bottomPanelTitle::before {
+            content: "Il dran";
+            position: absolute;
+            top: 2px; 
+            left: -2px; 
+            color: rgb(255, 0, 0);
+            z-index: -1;
+            /*transform: translate(-3px, -3px);  */
+        }
+        .bottomPanelTitle::after {
+            content: "Il dran";
+            position: absolute;
+            top: -2px; 
+            left: 2px; 
+            color: blue;
+            z-index: -1;
+            white-space: nowrap;
+            
+        }
+        .bottomPanelButton{
+            font-family: "altoneBold";
+            font-size: 20%;
+            color: #000000;
+            background: none;
+
+        }
+.topArticlesContainer {
+  opacity: 0; 
+  transform: translateX(-100%); 
+  transition: transform 1s ease, opacity 1s ease; 
+  
+  background: linear-gradient(to left,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255));
+  border-color: #000;
+    border-width: 1px;
+    border-style: inset;
+    width: 100vw;
+    
+    
+    
+}
+
+
+.topArticlesContainer.animate {
+  opacity: 1;
+  transform: translateX(0); 
+}
+.suggestedLinkContainer{
+    opacity: 0; /* Start invisible */
+    display: flex;
+   flex-direction:column;
+  transform: translateX(100%);
+  transition: transform 1s ease, opacity 1s ease;
+  
+    
+    background: linear-gradient(to right,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255));
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-color: #000;
+    border-width: 1px;
+    border-style: inset;
+    width: 100vw;
+    
+
+}
+.suggestedLinkContainer.animate{
+    opacity: 1; 
+  transform: translateX(0);
+
+}
+.articleContainer{
+    opacity: 0; 
+    display: flex;
+   flex-direction:column;
+  transform: translateX(-100%);
+  transition: transform 1s ease, opacity 1s ease;
+
+}
+.articleContainer.animate{
+    opacity: 1; 
+    transform: translateX(0);
+
+}
+.rowdisp{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+.contactsIcon{
+    position: relative;
+    width: 3vw;
+    height: auto;
+
+}
+.contactsIconIg{
+    position: relative;
+    width: 2vw;
+    height: auto;
+    margin-right: -20px;
+
+}
+.contactsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    
+
+
 }
 
     </style>
