@@ -198,7 +198,7 @@ function getText(artList) {
         topArticlesContainer.style.justifyItems="left";
         //topArticlesContainer.style.gridTemplateColumns ="repeat(1, 1fr)";
         topArticlesContainer.appendChild(title3);
-        for (i =0; i< data.length; i++ ){
+        for (i =0; (i< data.length && i<3); i++ ){
         console.log("eo");
         var articleBt = document.createElement("button");
         articleBt.style.border="none";
@@ -213,6 +213,7 @@ function getText(artList) {
             
 
         var articleContainer = document.createElement("div");
+        
 
         articleContainer.style.borderColor="rgb(0,0,0)"
         articleContainer.style.borderWidth="2px";
@@ -222,6 +223,7 @@ function getText(artList) {
         articleContainer.style.boxShadow="-5px 5px 10px rgba(0, 0, 0, 0.3)";
         //articleContainer.style.backgroundColor="rgba(255, 4, 251, 0.29)";
         articleContainer.style.background="linear-gradient(to left,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255))";
+        articleContainer.className="articleContainerHome";
         
         var artDate = document.createElement("p");
         artDate.style.fontFamily="neue";

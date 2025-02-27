@@ -338,6 +338,7 @@
     justify-content: center;
     align-items: center;
 }
+
 @media(max-width: 600px){
     body{
         overflow-x: hidden;
@@ -376,7 +377,7 @@
             position: relative;
             font-family: 'altoneBold';
             color: #000000;
-            font-size: 900%;
+            font-size: 700%;
             letter-spacing: -5px;
             margin-bottom: -50px;
             padding-left: 0%;
@@ -411,6 +412,7 @@
             margin-bottom: 0px;
             margin-top: 40px;
             padding-left: 0%;
+            text-align: center;
         }
 
         .line-background  {
@@ -445,7 +447,7 @@
     .tabButton{
         color: #000;
         font-family: "altone";
-        font-size: 150%;
+        font-size: 100%;
         width: auto;
         position: relative;
         background-color: #95959500;
@@ -501,9 +503,11 @@
     font-family: "altoneBold";
     color: #000;
     font-size: 50%;
-    margin-left: 10%;
-    margin-bottom: -10%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
     margin-top: 0px;
+    
 
 }
 .bottomPanel{
@@ -568,11 +572,13 @@
   transform: translateX(-100%); 
   transition: transform 1s ease, opacity 1s ease; 
   
+  
   background: linear-gradient(to left,  rgb(220, 255, 253),rgb(182, 187, 255),rgb(239, 173, 255));
   border-color: #000;
     border-width: 1px;
     border-style: inset;
     width: 100vw;
+    height: 10vh;
     
     
     
@@ -583,6 +589,20 @@
   opacity: 1;
   transform: translateX(0); 
 }
+
+
+
+.articleContainerHome{
+    width: 200%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    
+
+}
+
 .suggestedLinkContainer{
     opacity: 0; /* Start invisible */
     display: flex;
