@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
+/*
 document.addEventListener('scroll', function() {
     const element = document.querySelector('.topArticlesContainer');
     const element2 = document.querySelector('.suggestedLinkContainer');
@@ -67,7 +67,35 @@ document.addEventListener('scroll', function() {
     if (element2Position < viewHeight) {
         element2.classList.add('animate');
     }
+});*/
+
+// THIS SHOULD NOT BE WORKING BUT IT DOES
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll('.topArticlesContainer, .suggestedLinkContainer');
+  const element = document.querySelector('.topArticlesContainer');
+    const element2 = document.querySelector('.suggestedLinkContainer');
+  console.log("Elements found:", elements); // Debugging
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          console.log("Entry detected:", entry.target, "isIntersecting:", entry.isIntersecting); 
+
+          if (true) {
+            element.classList.add('animate');
+              entry.target.classList.add('animate');
+             // console.log("Animating:", entry.target); 
+          }
+      });
+  }, { threshold: 0.01 });
+
+  elements.forEach(element => {
+      observer.observe(element);
+      console.log("Observing:", element); 
+  });
 });
+
+
+
 
 document.addEventListener('scroll', function() {
     const elements =  document.querySelectorAll('.articleContainer');
