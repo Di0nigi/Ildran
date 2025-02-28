@@ -311,6 +311,7 @@ suggestedLinkContainer.style.display="flex";
 suggestedLinkContainer.style.alignItems="left";
 
 var titleLinks = document.createElement("p");
+//titleLinks.className("titleLinks")
 titleLinks.style.marginTop="20px";
 titleLinks.innerHTML = 'Articoli e fonti <br> per approfondire';
 titleLinks.style.fontFamily="altoneBold";
@@ -319,6 +320,7 @@ titleLinks.style.fontSize="50px";
 
 suggestedLinkContainer.appendChild(titleLinks);
 var linksContainer = document.createElement("div");
+linksContainer.classList="linksContainer";
 
 //linksContainer.style.width="45vw";
 linksContainer.style.borderStyle="inset";
@@ -333,6 +335,7 @@ linksContainer.style.background="linear-gradient(to left,  rgb(220, 255, 253),rg
 
 for (j =0; j< linkList.length; j++ ){
     var link = document.createElement("p");
+    link.classList="link";
     link.innerHTML = `
         <h1>What is AI:</h1>
         <p>${linkList[j]}</p>`;
