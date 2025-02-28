@@ -176,6 +176,7 @@ function getText(artList) {
                 }
             });
             var art = new Article(tit,content,aut,date,path);
+            art.prev=art.createPreview(200);
             articles.push(art);
             
             
